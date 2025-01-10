@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: getwaymicroservice
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          #permite a localizacao de outros microservicos
+          enabled: true
+          #ativando por lowerCase (caixaBaixa)
+          lower-case-service-id: true
+
+server:
+  port: 5050
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

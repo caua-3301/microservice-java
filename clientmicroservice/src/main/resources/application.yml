@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: clientmicroservice
+
+server:
+  #indica que a porta ser� aleat�ria, facilita a cria��o de novas inst�ncia dos servi�os
+  port: 0
+
+eureka:
+  #configura��o do cliente
+  client:
+    #indica onde o servidor eureka est� (servidor que esse cliente vai se registrar)
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  #configura��es de inst�ncia
+  instance:
+    #o "nome" da inst�ncia que ser� nomeDaApliocacao:id aleat�rio
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}

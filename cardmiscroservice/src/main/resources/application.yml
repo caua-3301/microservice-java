@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: cardmiscroservice
+
+server:
+  port: 0
+
+eureka:
+  client:
+    service-url:
+      defaultLocation: http://localhost:8761/eureka

@@ -1,0 +1,15 @@
+spring:
+  application:
+    #esse nome será usado para acessar a instância desse"microservice"
+    name: eurekaserver
+
+server:
+  #a porta em que esse "microservice" está sendo servida
+  port: 8761
+eureka:
+  client:
+    #vai impedir que esse "Eureka Server" tente se registrar em outro server, já que esse não é um cliente (os outros que serão registrados aqui)
+    #em resumo, indica que essa instância será o servidor principal e não atuará como cliente
+    register-with-eureka: false
+    #impede a busca do registro de outros servidores
+    fetch-registry: false
