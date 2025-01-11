@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cardmiscroservice
+    name: creditappraisermicroservice
 
 server:
   port: 0
@@ -9,7 +9,5 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
-
   instance:
-    #o "nome" da inst�ncia que ser� nomeDaApliocacao:id aleat�rio
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}

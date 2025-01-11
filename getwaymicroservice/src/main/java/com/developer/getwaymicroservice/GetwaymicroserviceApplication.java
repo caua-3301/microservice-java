@@ -28,6 +28,8 @@ public class GetwaymicroserviceApplication {
 				* para isso, ele recebe um lambda expression, que recebe um objeto da rota
 				* com esse objeto definimos com route.path("x") que toda corespondecia dessa rota sera direcionada para a uri do balanceador de carga */
 					.route(route -> route.path("/clients/**").uri("lb://clientmicroservice"))
+					.route(route -> route.path("/cards/**").uri("lb://cardmiscroservice"))
+					.route(route -> route.path("/credit-appraiser/**").uri("lb://creditappraisermicroservice"))
 				.build();
 	}
 

@@ -24,7 +24,7 @@ public class ClientController {
 
     @GetMapping
     public String status() {
-        log.info("Microservice activate");
+        log.info("This instance was called");
         return HttpStatus.OK.toString();
     }
 
@@ -39,7 +39,7 @@ public class ClientController {
     }
 
     @GetMapping(params = "cpf")
-    public ResponseEntity<Client> getClient( @RequestParam("cpf") String cpf) {
+    public ResponseEntity getClient( @RequestParam("cpf") String cpf) {
         Optional<Client> client = clientService.getByCpf(cpf);
 
         if (client.isEmpty()) {

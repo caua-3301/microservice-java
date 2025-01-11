@@ -1,14 +1,17 @@
-package com.developer.clientmicroservice;
+package com.developer.creditappraisermicroservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+
 @SpringBootApplication
 @EnableEurekaClient
-public class ClientmicroserviceApplication {
+@EnableFeignClients
+public class CreditappraisermicroserviceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ClientmicroserviceApplication.class, args);
+		SpringApplication.run(CreditappraisermicroserviceApplication.class, args);
 	}
 
 }
